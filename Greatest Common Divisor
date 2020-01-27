@@ -1,0 +1,8 @@
+// How to find the greatest common divisor of two numbers
+
+function greatestCommonDivisor(a,b){
+    if(b==0) return a;
+    else return greatestCommonDivisor(b, a%b);
+}
+
+console.log(greatestCommonDivisor(21,9)); // 3
