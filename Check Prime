@@ -1,0 +1,19 @@
+//How to verify a prime number.
+
+function isPrime(n){
+    var divisor = 2;
+    while(n>divisor){
+        if(n%divisor == 0){
+            return false;
+        }else{
+            //After 3, we can increase the divisor by 2. If a number is divisible by any even number, it will be divisible by 2.
+            divisor = divisor >2 ? divisor+1 : divisor+2 ;
+            //Alternatively we could just put 'divisor++;' But the one above is better.
+        }
+        return true;
+    }
+}
+
+console.log(isPrime(5)); //true
+console.log(isPrime(6)); //false
+ 
