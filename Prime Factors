@@ -1,7 +1,7 @@
 //How to find all prime factors of a number
 
-function primeFactors(n){
-    var factors = [], divisor = 2;
+const primeFactors = n => {
+    let factors = [], divisor = 2;
 
     while(n>2){
         if(n%divisor == 0){
