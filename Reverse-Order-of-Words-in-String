@@ -1,0 +1,13 @@
+const reverse = word => {
+  word = word.split(' ');
+  for(let i=0; i<(word.length)/2; i++){
+    let temp = word[i];
+    word[i] = word[word.length-1-i];
+    word[word.length-1-i] = temp;
+  }
+  return word.join(' ');
+}
+
+
+console.log(reverse('hello omer how are you'));
+//expected: 'you are how omer hello'
