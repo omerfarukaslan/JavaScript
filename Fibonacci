@@ -1,8 +1,9 @@
+<script>
 // How to get nth Fibonacci number
 
 //Runtime complexity O(n):
-function fibonacci(n){
-    var fibo = [0,1];
+const fibonacci = n => {
+    let fibo = [0,1];
 
     if(n <= 2) return 1;
 
@@ -15,15 +16,11 @@ function fibonacci(n){
 
 console.log(fibonacci(15)); // 610
 
-
-
 //Runtime complexity O(2n):
-
-function fibonacci(n){
-   
+const fibonacci2 = n => {
     if(n<=1) return n;
-    else return fibonacci(n-1) + fibonacci(n-2);
-   
+    else return fibonacci2(n-1) + fibonacci2(n-2);
 }
 
-console.log(fibonacci(15));
+console.log(fibonacci2(15));
+</script>
